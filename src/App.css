@@ -1,3 +1,11 @@
+.centered-with-margin {
+  margin: auto;
+}
+div.centered-with-margin {
+  width: 100%;
+  margin:auto;
+}
+
 .App {
   text-align: center;
 }

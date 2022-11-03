@@ -1,23 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const data = [
+    {
+      name: "Norman Goodtrack",
+      mood: "happy!",
+      age: 30
+    },
+    {
+      name: "Laura Silva",
+      mood: "focused!",
+      age: 24
+    },
+    {
+      name: "Pavlova Snowbrick",
+      mood: "tired!",
+      age: 28
+    },
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>HAPPY TABLE!</h1>
+      <div>
+        <table  className='centered-with-margin'>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Mood</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data && data.map(datarow => <tr>
+              <td>{datarow.name}</td>
+              <td>{datarow.mood}</td>
+              <td>{datarow.age}</td>
+            </tr>)}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
